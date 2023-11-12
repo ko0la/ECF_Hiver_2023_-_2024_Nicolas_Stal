@@ -16,4 +16,4 @@ class Cars {
         $this->firstCirculation = $firstCirculation;
         $this->photoNames = $photoNames;
         
-}
+}}
