@@ -1,2 +1,4 @@
-# ECF_Hiver_2023_-_2024_Nicolas_Stal
-Projet 
+Readme
+
+
+Pour faciliter le routing du projet, il est indispensable de nommer le dossier contenant le projet "GarageVParrot". Il fonctionne particulièrement bien sur Xampp, a mettre dans htdocs. 
