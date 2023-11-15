@@ -13,3 +13,4 @@ class users {
 
     public function __construct($id, $username, $password, $email, $firstName, $lastName, $newsletter) {
 }
+}
