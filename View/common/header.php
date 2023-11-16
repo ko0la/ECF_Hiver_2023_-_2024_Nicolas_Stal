@@ -28,7 +28,7 @@ if (session_status() == PHP_SESSION_NONE) {
             <div class="nav-links ">
                 <a href="/garageVparrot/index.php">Page d'acceuil</a>
                 <?php 
-                if(isset($_SESSION['user'])) { // check if user is logged in
+                if(isset($_SESSION['id'])) { // check if user is logged in
                 ?>
                     <a href="/garageVparrot/profile.php">Mon profil</a>
                     <a href="/garageVparrot/logout.php">Se déconnecter</a>

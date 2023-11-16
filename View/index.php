@@ -1,3 +1,4 @@
+<?php require_once __DIR__."/../model/cookie_creator.php";?>
 <!DOCTYPE html>
 <html lang="fr-FR">
 <head>
@@ -13,11 +14,7 @@
 <div class="row">
     <?php 
     require_once __DIR__."/common/sidebar.php"?>
-<!-- Sidebar placeholder -->
-<!-- Adjust width as necessary <div class="d-none d-lg-block" style="width: 25%;"> -->
-   
-
-        <div class="col-md-9  col-sm-12">
+        <div class="col-md-10  col-sm-12">
                 <h1>Notre garage</h1>
                 <p>Depuis 2008, nous proposons nos services d'entretiens pour vos véhicules</p>
             </div>
