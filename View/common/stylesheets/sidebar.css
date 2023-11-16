@@ -1,13 +1,6 @@
-#sidebar{
-    /*margin-top: 80px;*/
-}
 @media (min-width: 768px) {
     #sidebar {
-        height: 100vh;
-        /*position: sticky;*/
-        /*top: 0;*/
-    }
-}
+    height:120vh} }
 @media (max-width: 767px) {
     #sidebar .navbar-nav {
         flex-direction: row !important;

@@ -1,0 +1,1 @@
+<? var_dump($_SESSION['user_id'], $_SESSION['user_email'], $_SESSION['user_role']);

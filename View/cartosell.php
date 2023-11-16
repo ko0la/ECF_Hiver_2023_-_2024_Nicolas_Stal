@@ -1,1 +1,1 @@
-col-md-9 offset-md-3 col-sm-12
+<?php require_once __DIR__."/../Model/cookie_creator.php";?>
