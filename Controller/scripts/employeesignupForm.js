@@ -44,20 +44,27 @@ signup.addEventListener('click', function (event) {
         document.getElementById('passwordError').textContent = "Mot de passe incorrect, il doit contenir au moins une lettre, un chiffre, et faire une longueur d'au moins 8 caractères";
         return false;
     }
-    fetch('http://localhost/garageVparrot/Model/Entity/usersSignup.php', {
+    fetch('http://localhost/garageVparrot/Model/Entity/employeeSignup.php', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded'
         },
+        credentials: 'include', 
         body: `username=${encodeURIComponent(username)}&name=${encodeURIComponent(name)}&firstName=${encodeURIComponent(firstname)}&phoneNumber=${encodeURIComponent(phoneNumber)}&email=${encodeURIComponent(email)}&password=${encodeURIComponent(password)}`
     })
     .then(response => response.text())
     .then(data => {
         console.log(data);
-        if (data.trim() === 'Connection autorisée') {
-            window.location.href = "/garageVparrot/index.php";
+        if (data.trim() === 'Compte créé avec succès') {
+            document.getElementById('employeesignupform').textContent = "";
+            document.getElementById('feedbackBDD').textContent = "Le compte employé a bien été crée, il peut dès a présent se connecter sur le site";
+        } else if (data.trim() === 'Cette email n\'est pas disponible') 
+        {
+            document.getElementById('erreur').textContent ="Adresse mail déja utilisée";
+        } else if (data.trim() ==="Ce nom d\'utilisateur est déja utilisé" ) {
+            document.getElementById('erreur').textContent="Nom d'utilisateur déja utilisé"
         } else {
-            document.getElementById('erreur').textContent = data;
+            document.getElementById('erreur').textContent = "Une erreur est parvenue, veuillez réssayer plus tard"
         }
     })
     .catch(error => {

@@ -3,7 +3,7 @@
         session_start();
     };
     require_once __DIR__ . '/../config/config.php';
-
+ 
     // Availability check for username and Email : 
     try {   
 //CODE POUR AUTOMATIQUEMENT CREER LE COMPTE ADMIN EN DATABASE //
@@ -35,4 +35,4 @@
         echo "Une erreur est survenue, vous allez être redirigé vers la pagne de création de compte";
                     header("Location: /garageVparrot/signup.php");
                         exit();
-    }
+    } 

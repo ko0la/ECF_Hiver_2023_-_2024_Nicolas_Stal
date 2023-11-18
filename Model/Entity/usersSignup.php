@@ -11,6 +11,7 @@ if (!isset($_COOKIE[session_name()])) {
 }
 
 if (session_id() != $_COOKIE[session_name()]) {
+    die('');
 }
 
 
