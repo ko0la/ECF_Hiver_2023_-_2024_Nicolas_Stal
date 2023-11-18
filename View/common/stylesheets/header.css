@@ -1,6 +1,7 @@
 header {
-  padding: 0%;
+    padding: 0%;
 }
+
 .navbar {
     display: flex;
     flex-direction: column;
@@ -15,12 +16,60 @@ header {
 
 .logo-img {
     height: 40px;
-    width:auto;
+    width: auto;
     object-fit: contain;
 }
+
 .nav-links {
     display: flex;
     justify-content: space-around;
     width: 100%;
     padding: 0 0px;
+}
+
+table td,
+table th {
+    text-align: center;
+}
+
+body {
+    min-height: 80vh;
+}
+
+.small-txt {
+    font-size: x-small;
+    line-height: 1rem;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    #sidebar {
+        height: 100vh;
+
+        display: flex;
+        flex-direction: column;
+        justify-content:space-around;
+        align-items:flex;
+    }
+}
+
+@media (max-width: 767px) {
+    #sidebar .navbar-nav {
+        flex-direction: row !important;
+    }
+
+    #sidebar .nav-item {
+        flex-grow: 1;
+        text-align: center;
+    }
+}
+
+.vertical-form {
+    display: flex;
+    flex-direction: column;
 }
