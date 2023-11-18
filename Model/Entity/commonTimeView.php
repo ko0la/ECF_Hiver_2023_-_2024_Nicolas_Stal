@@ -42,7 +42,9 @@
                 if ($day=="Je" ) {echo "<div class-col-md12>";} else {}
                 if ($day=="Di") {
                     echo " Tél : 0123456789 ";
+
             }echo " | ";}
+
             echo "</div>";
             echo "</div>";
         } catch (PDOException $e) {
