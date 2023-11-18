@@ -10,7 +10,7 @@
 
 <body>
 <div class="container-fluid">
-<?php require_once __DIR__."/common/header.php"; ?>
+<?php require_once __DIR__."/common/commonview.php"; ?>
 <div class="row">
     <?php 
     require_once __DIR__."/common/sidebar.php"?>
@@ -24,7 +24,7 @@
         </div>
     </div>
     </div>
-<?php require_once __DIR__ ."/common/footer.php";?>
+
 </body>
 </html>
 </body>
