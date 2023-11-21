@@ -1,6 +1,7 @@
 header {
-  padding: 0%;
+    padding: 0;
 }
+
 .navbar {
     display: flex;
     flex-direction: column;
@@ -15,12 +16,145 @@ header {
 
 .logo-img {
     height: 40px;
-    width:auto;
+    width: auto;
     object-fit: contain;
 }
+
 .nav-links {
     display: flex;
     justify-content: space-around;
     width: 100%;
     padding: 0 0px;
 }
+
+table td,
+table th {
+    text-align: center;
+}
+
+
+.small-txt {
+    font-size: x-small;
+    line-height: 1rem;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    #sidebar {
+        height: auto;
+
+        display: flex;
+        flex-direction: column;
+        justify-content:space-around;
+        align-items:flex;
+    }
+}
+
+@media (max-width: 767px) {
+    #sidebar .navbar-nav {
+        flex-direction: row !important;
+    }
+
+    #sidebar .nav-item {
+        flex-grow: 1;
+        text-align: center;
+    }
+}
+
+.vertical-form {
+    display: flex;
+    flex-direction: column;
+}
+.smaller-font {
+    text-align: center;
+}
+.car-image {
+    width: 100%;
+    height: auto; 
+    max-width: 300px; 
+    max-height: 250px;
+    display: block; 
+    margin: auto; 
+    
+ }
+
+#carsearchform {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#carsearchform > div {
+    flex: 1;
+    padding: 5px;
+}
+
+#pagination {
+    text-align:  center;
+    margin-bottom: 50px;
+}
+
+#carResults {
+    
+    margin-bottom: 50px; 
+}
+
+footer {
+    clear: both;
+}
+
+form div {
+    display: flex;
+    align-items: center;
+}
+
+.carousel-control.left, .carousel-control.right {
+    margin:5px;
+    z-index: 1;
+  }
+
+
+
+
+footer {
+    margin-top: auto;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    margin: 0;
+}
+
+.content-container {
+    flex: 1 0 auto; /* This will make the content-container take up all available space, effectively "pushing" the footer to the bottom. */
+}
+
+footer {
+    flex-shrink: 0; /* This will prevent the footer from shrinking if there's not enough space. */
+}
+
+
+html, body, .navbar {
+    height: 100%;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+    background-color: bisque;
+  }
+  .content {
+    flex: 1 0 auto;
+  }
+  .footer {
+    flex-shrink: 0;
+  }

@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=*, initial-scale=1.0">
-    <title>Formulaire d'inscription au site</title>
-    <link rel="stylesheet" type="text/css" href="/garageVParrot/View/common/stylesheets/signup.css" />
+    <title>Formulaire de contact</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="/garageVparrot/View/common/stylesheets/header.css">
 </head>
 
 <body>
@@ -15,13 +16,8 @@
             <?php
             require_once __DIR__ . "/common/sidebar.php" ?>
             <div class="col-md-10  col-sm-12">
-                <div class="form">
-                    <form action="/garageVparrot/Model/Entity/usersSignup.php" method="POST">
-
-                        <label for="username">Nom d'utilisateur :</label>
-                        <span id='usernameError'></span>
-                        <input type="text" name="username" id="username">
-                        <span>Seul le nom d'utilisateur sera visible aux visiteurs du site</span>
+                <div class="form" id="form">
+                    <form class="vertical-form" action="" method="POST" >
                         <label for="name">Nom :</label>
                         <div id='nameError'></div>
                         <input type="text" name="name" id="name" required placeholder="Nom">
@@ -31,19 +27,21 @@
                         <label for="email">Adresse mail :</label>
                         <div id='emailError'></div>
                         <input type="email" name="email" id="email" required placeholder="email@mail.com">
-                        <label for="password">Mot de passe :</label>
-                        <div id='passwordError'></div>
-                        <input type="password" name="password" id="password">
                         <label for="phoneNumber">Numéro de téléphone :</label>
                         <div id='phoneNumberError'></div>
                         <input type="text" name="phoneNumber" id="phoneNumber">
-                        <button id="signupsubmit" type="submit">S'inscrire</button>
+                        <label for="contact">Votre demande porte sur  : </label>
+                <div id="feedbackcomment"></div>
+                        <textarea class="col-12"  name="contact" id="contact" placeholder="Tapez ici la raison de votre demande de contact"></textarea>
+                        <button id="signupsubmit" type="submit">Nous contacter</button>
+</div>
                         <div id="erreur">
                     </form>
                 </div>
             </div>
-        </div>
-        <script src="/garageVparrot/Controller/scripts/signupForm.js"></script>
+        </div> 
+    
+        <script src="/garageVparrot/Controller/scripts/contactForm.js"></script>
+        <?php require_once __DIR__ . "/common/footer.php" ?>
 </body>
-
 </html>

@@ -2,28 +2,23 @@ var signup = document.getElementById('signupsubmit');
 
 signup.addEventListener('click', function (event) {
     event.preventDefault();
-    var username = document.getElementById('username').value;
     var name = document.getElementById('name').value;
     var firstname = document.getElementById('firstName').value;
     var phoneNumber = document.getElementById('phoneNumber').value;
     var email = document.getElementById('email').value;
-    var password = document.getElementById('password').value;
-    document.getElementById('usernameError').textContent = "";
+    var contact = document.getElementById('contact').value;
+    var feedbackcomment= document.getElementById('feedbackcomment')
     document.getElementById('nameError').textContent = "";
     document.getElementById('firstnameError').textContent = "";
     document.getElementById('phoneNumberError').textContent = "";
     document.getElementById('emailError').textContent = "";
-    document.getElementById('passwordError').textContent = "";
     var patternEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    var patternPassword = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
-    var patternUsername =/^[A-Za-z0-9]{4,}$/;
+    var patternComment = /^[\s\S]{1,1500}$/
     var patternName=/^[A-Za-z-]{1,50}$/;
     var patternPhoneNumber=/^\d{10}$/;
-
-    if(!patternUsername.test(username)){
-        document.getElementById('usernameError').textContent=("Nom d'utilisateure incorrect, il doit contenir que des lettres et/ou des chiffres faire une longueur d'au moins  4 caractères")
-        return false;
-    }
+    if(!patternComment.test(contact)){
+        feedbackcomment.textContent = 'Votre demande de contact ne peut pas dépasser 1500 caractères et ne doit pas être vide'; 
+        return false}
     if(!patternName.test(name)){
         document.getElementById('nameError').textContent = "Nom incorrect, il doit contenir que des lettres et peut avoir une longueur d'au plus 50 caractères";
         return false;
@@ -40,22 +35,20 @@ signup.addEventListener('click', function (event) {
         document.getElementById('emailError').textContent = "Email incorrect, il doit avoir un format valide (exemple: exemple@domaine.com)";
         return false;
     }
-    if(!patternPassword.test(password)){
-        document.getElementById('passwordError').textContent = "Mot de passe incorrect, il doit contenir au moins une lettre, un chiffre, et faire une longueur d'au moins 8 caractères";
-        return false;
-    }
-    fetch('http://localhost/garageVparrot/Model/Entity/usersSignup.php', {
+
+    fetch('http://localhost/garageVparrot/Model/Entity/contact.php', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded'
         },
-        body: `username=${encodeURIComponent(username)}&name=${encodeURIComponent(name)}&firstName=${encodeURIComponent(firstname)}&phoneNumber=${encodeURIComponent(phoneNumber)}&email=${encodeURIComponent(email)}&password=${encodeURIComponent(password)}`
+        body: `&name=${encodeURIComponent(name)}&firstName=${encodeURIComponent(firstname)}&phoneNumber=${encodeURIComponent(phoneNumber)}&email=${encodeURIComponent(email)}&contact=${encodeURIComponent(contact)}`
     })
     .then(response => response.text())
     .then(data => {
         console.log(data);
         if (data.trim() === 'Connection autorisée') {
-            window.location.href = "/garageVparrot/index.php";
+            document.getElementById('erreur').textContent = "Votre demande de contact a bien été prise en compte, notre personnel va vous recontacter au plus vite";
+            document.getElementById("form").textContent= "";
         } else {
             document.getElementById('erreur').textContent = data;
         }

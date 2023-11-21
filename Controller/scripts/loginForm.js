@@ -3,16 +3,15 @@ var connection = document.getElementById('connectionsubmit');
 connection.addEventListener('click', function(event) {
     event.preventDefault();
     document.getElementById('erreuriden').textContent = '';
-    var email = document.getElementById('email').value;
+    var username = document.getElementById('username').value;
     var password = document.getElementById('password').value;
     var feedbackpassword = document.getElementById('feedbackpassword');
-    var feedbackemail = document.getElementById('feedbackemail');
 
-    var patternEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/ ;
+    var patternUsername =/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     var patternPassword = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
 
-    if(patternEmail.test(email)) {
-        feedbackemail.textContent = '';
+    if(patternUsername.test(username)){
+        document.getElementById('feedbackusername').textContent=("");
         if(patternPassword.test(password)) {
             feedbackpassword.textContent = '';
             
@@ -21,7 +20,7 @@ connection.addEventListener('click', function(event) {
                 headers: {
                   'Content-Type': 'application/x-www-form-urlencoded'
                 },
-                body: `email=${encodeURIComponent(email)}&password=${encodeURIComponent(password)}`,
+                body: `username=${encodeURIComponent(username)}&password=${encodeURIComponent(password)}`,
                 credentials: 'include'
             })
             .then(response => response.text()) 
@@ -41,6 +40,6 @@ connection.addEventListener('click', function(event) {
             feedbackpassword.textContent = 'Le mot de passe doit contenir au moins 8 charactères dont un chiffre et une lettre, espace non autorisé';
         }
     } else {
-        feedbackemail.textContent = 'Adresse email incorrect';
+        feedbackusername.textContent = "Ceci n'est pas une adresse email valide";
     }
 });
