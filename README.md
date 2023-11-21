@@ -9,3 +9,6 @@ Le résultat final est "peu attractif" et c'est un euphémisme.
 
 Il est nécessaire d'importer ma database carshop.sql pour le bon fonctionnement, deplus il faut donner les droits a un utilisateur de la sorte ;
 create user 'carshopuser'@'localhost' IDENTIFIED BY '91827364550' ;
+
+
+L'expérience utilisateur est censé commencé par le fichier index.php situé a la racine du document.
