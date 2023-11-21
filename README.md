@@ -9,8 +9,3 @@ Le résultat final est "peu attractif" et c'est un euphémisme.
 
 Il est nécessaire d'importer ma database carshop.sql pour le bon fonctionnement, deplus il faut donner les droits a un utilisateur de la sorte ;
 create user 'carshopuser'@'localhost' IDENTIFIED BY '91827364550' ;
-
-normalement, toutes les fonctionnalités fonctionnent bien sauf le carousel pour montrer les voitures, dans l'idée, il faut lancer le site via index.php et se connecter avec le compte
-"Vparrot@gmail.com" et le mot de passe "123456789aA"
-
-Je suis sincèrement désolé du mal de tête que vous allez avoir si vous regardez les fichiers, en l'ayant écrit moi même je me perds de manière systématique vu le nombre de fichiers (beaucoup trop élevés) et la similarité entre les noms, ca peut servir d'exemple de comment NE PAS organiser l'architecture du site, chaque page contient entre 6 et 12 fichiers et ils ne s'entendent pas du tout entre eux, et ce même après une dixaine d'heures a essayer de forcer une mise en page en recomptant les div et en ajustant le css.
