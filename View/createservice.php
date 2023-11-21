@@ -15,6 +15,7 @@ if (isset($_SESSION["username"])) {
     <div class="container-fluid">
         <?php require_once __DIR__ . "/common/header.php"; ?>
         <div class="row">
+            <div class="container-fluid"></div>
             <?php
             require_once __DIR__ . "/common/sidebar.php" ?>
             <div class="col-md-10  col-sm-12">
@@ -36,7 +37,10 @@ if (isset($_SESSION["username"])) {
             </form>
             <div id="renvoiBDD"></div>
             <?php require_once __DIR__ . "/../Model/Entity/display_public_service.php"; ?>
-                </div>
+            </div>
+            </div>
+        
+        </div> </div>
             </div>
         
         </div>

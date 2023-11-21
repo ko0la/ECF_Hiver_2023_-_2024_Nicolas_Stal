@@ -24,8 +24,8 @@ if (isset($_SESSION["user_role"])) {
 require_once __DIR__."/../Model/Entity/actualTimeTable.php" 
 ?> 
 <hr>     
-<?php for ($i=1; $i<=7; $i++) {?> 
-<div class="<?php echo dayAssociation($i); ?>">Modifier les horaires du <?php echo dayAssociation($i); ?></div><br>
+<?php for ($i=1; $i<=7; $i++) {?>
+    <div class="container-fluid"><div class="<?php echo dayAssociation($i); ?>">Modifier les horaires du <?php echo dayAssociation($i); ?></div>
 <form id="form<?php echo $i;?>" method="POST" action="/garageVparrot/model/Entity/update_timetable.php" onsubmit="return validateTimes(<?php echo $i; ?>);">
     <input type="hidden" name="day_id" value="<?php echo $i; ?>">
 <label for="open<?php echo ($i);?>">
@@ -43,20 +43,23 @@ require_once __DIR__."/../Model/Entity/actualTimeTable.php"
 
         <label for="closing_time<?php echo ($i);?>">Ferme à</label>
         <input type="time" id="closing_time<?php echo ($i);?>" name="closing_time<?php echo $i; ?>">
-    </div>
+    
     <div id="breakTimeFields<?php echo $i; ?>" style="display: none;">
         <label for="afternoon_opening_time<?php echo ($i);?>">Réouvre à</label>
         <input type="time" id="afternoon_opening_time<?php echo ($i);?>" name="afternoon_opening_time<?php echo $i; ?>">
 
         <label for="afternoon_closing_time<?php echo ($i);?>">Ferme le soir à</label>
         <input type="time" id="afternoon_closing_time<?php echo ($i);?>" name="afternoon_closing_time<?php echo $i; ?>">
-    </div>
+        </div></div>
     <input class="btn-primary" type="submit" value="Modifier les horaires du <?php echo dayAssociation($i); ?>">
+<hr></div>
 </form>
-<hr>
-<?php } ?>
 
+
+<?php } ?>
+</div></div></div></div></div></div>
 <script src="/garageVparrot/Controller/scripts/modifierhoraires.js"></script>
+
 <?php require_once __DIR__."/common/footer.php"; ?>
 </body>
 </html>

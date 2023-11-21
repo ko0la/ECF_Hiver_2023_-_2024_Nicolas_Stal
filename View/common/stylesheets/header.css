@@ -46,7 +46,7 @@ table th {
 
 @media (min-width: 768px) {
     #sidebar {
-        height: auto;
+        min-height: 100vh - 50px;
 
         display: flex;
         flex-direction: column;
@@ -136,15 +136,14 @@ body {
 }
 
 .content-container {
-    flex: 1 0 auto; /* This will make the content-container take up all available space, effectively "pushing" the footer to the bottom. */
+    flex: 1 0 auto;
 }
 
 footer {
-    flex-shrink: 0; /* This will prevent the footer from shrinking if there's not enough space. */
-}
+    flex-shrink: 0; }
 
 
-html, body, .navbar {
+html, body, #navbar {
     height: 100%;
   }
   body {
@@ -155,6 +154,7 @@ html, body, .navbar {
   .content {
     flex: 1 0 auto;
   }
-  .footer {
+footer {
+    height: 60px;
     flex-shrink: 0;
   }

@@ -9,12 +9,12 @@
     <Title>Connection au site</Title>
 </head>
 <body>
-<div class="container-fluid">
 <?php require_once __DIR__."/common/header.php"; ?>
+<div class="container-fluid">
 <div class="row">
     <?php 
     require_once __DIR__."/common/sidebar.php"?>
-    <div class="col-md-10  col-sm-12">
+        <div class="col-md-10  col-sm-12">
         <h3>Formulaire de connexion</h3>
         <form method="POST">
             <label for="username" >Email utilisateur:</label>
@@ -26,7 +26,8 @@
             <button id="connectionsubmit" >Se connecter</button>
             <div id="erreuriden"></div>
         </form>
-    </div>
+        </div>
+</div>
 </div>
 <script src="/garageVparrot/Controller/scripts/loginForm.js"> </script>
 <?php require_once __DIR__."/common/footer.php"?>

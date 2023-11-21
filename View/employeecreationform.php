@@ -33,10 +33,19 @@ if (isset($_SESSION["username"])) {
                     </form>
                     <div id="feedbackBDD"></div>
                         <div id="erreur"></div>
-                </div>
+                        </div>
+            </div>
+        </div> </div>
+            </div>
+        </div>                 </div>
+            </div>
+        </div> </div>
             </div>
         </div>
+
+        <?php require_once __DIR__ . "/common/footer.php"; ?>
         <script src="/garageVparrot/Controller/scripts/employeesignupForm.js"></script>
+
 </body>
 
 </html>

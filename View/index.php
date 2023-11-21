@@ -20,14 +20,17 @@
                 <h1>Notre garage</h1>
                 <p>Depuis 2008, nous proposons nos services d'entretiens pour vos véhicules</p>
                 <div><h3>Nos services</h3> </div>
-                <?php require_once __DIR__.'/../Model/Entity/display_public_service.php';?>
+               <div> <?php require_once __DIR__.'/../Model/Entity/display_public_service.php';?></div>
                 <div><h3>Les commentaires de nos clients</h3></div>
                 <?php require_once __DIR__ . '/../Model/Entity/viewReviews.php' ;?>
             </div>
-        </div>
-    </div>
-    </div>
+            </div>
+</div>
+</div></div>     </div>
+</div>
+</div></div>
 <?php require_once __DIR__ ."/common/footer.php";?>
+
 </body>
 </html>
 </body>

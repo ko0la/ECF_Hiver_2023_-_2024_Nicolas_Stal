@@ -20,6 +20,11 @@
             <div class="col-md-10  col-sm-12">
                 <h3>Les demandes de contact que vous avez reçu</h3>
                 <?php require_once __DIR__ . "/../Model/Entity/contactask.php"; ?>
+            </div>
+        </div>
+    </div>            </div>
+        </div>
+    </div>
                 <?php require_once __DIR__ . "/common/footer.php"; ?>
                 
 

@@ -16,6 +16,6 @@ $result = $query->fetchAll(PDO::FETCH_ASSOC);
             <input type="hidden" name="service_id" value="'.$id.'"/>
             <input type="submit" class="btn btn-warning text-center"
             value="Supprimer le service"></form>
-            ';} else{}} else{} }
+           </div></hr> ';} else{ }} else{echo "<hr>";} }
 } catch (PDOException $e) {
     echo "Une erreur technique est survenue";}

@@ -1,4 +1,5 @@
 <?php require_once __DIR__ . "/../model/cookie_creator.php"; 
+
 if (isset($_SESSION["user_role"])) { ?>
     <!DOCTYPE html>
     <html lang="fr-FR">

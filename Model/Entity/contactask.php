@@ -38,7 +38,7 @@ if (isset($_SESSION['user_role'])) {
                     $stmt2->execute();
                     $row2 = $stmt2->fetch();
                     echo "<div> Cette demande portait sur la voiture suivante : <br>". $row2["carName"]. " Marque: ". $row2["brand"]."<br>".
-                    $row2["mileage"]." Km au compteur et mise en circulation en " . $row2["firstCirculation"]."<br>"."Cette voiture dispose des options suivantes : ".$row2["options"]."<hr><br><br>";
+                    $row2["mileage"]." Km au compteur et mise en circulation en " . $row2["firstCirculation"]."<br>"."Cette voiture dispose des options suivantes : ".$row2["options"]."<hr><br> </div>";
                 }
             }
         } catch (PDOException $e) {

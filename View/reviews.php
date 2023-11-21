@@ -14,7 +14,7 @@
     <div class="container-fluid content-container">
         <?php require_once __DIR__ . "/common/header.php"; ?>
         <div class="row">
-            
+        <div class="container-fluid"></div>
             <?php require_once __DIR__ . "/common/sidebar.php" ?>
             <div class="col-md-10  col-sm-12">
 
@@ -27,9 +27,15 @@
                         }
                     } else {
                         require_once __DIR__ . '/../Model/Entity/viewReviews.php';
+                      
                     } ?>
+                
                 </div>
-            </div>
+        </div>  
+        </div>            </div>
+        </div>  
+        </div>            </div>
+        </div>  
         </div>
         <?php require_once __DIR__.'/common/footer.php'; ?>
 </body>

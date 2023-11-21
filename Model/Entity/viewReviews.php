@@ -8,9 +8,7 @@ if (session_status() == PHP_SESSION_NONE) {
 if (session_status() == PHP_SESSION_NONE) {
     die('No active session found');
 }
-if (!isset($_COOKIE[session_name()])) {
-    die('Session cookie is not set');
-}
+
     try {
         $stmt = 'Select * from feedback where status = 1 ORDER by id DESC';
         $query = $pdo->prepare($stmt);
