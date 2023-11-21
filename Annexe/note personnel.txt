@@ -1,4 +1,0 @@
-Version bootleg EX.
-
-
-Ca fonctionne mais c'est très laid,  et ça m'a l'air complêtement impossible à maintenir à n'importe quel terme sans supprimer le dossiercontenant le projet, que je vais faire après l'avoir posté sur github en espérant mieux m'y prendre quand je le recommencerais de 0 pour le dossier projet final avec des noms de colonnes moins contraignant et des variables mieux nommées, merci pour l'expérience et je m'excuse du résultat esthétique final qui est quelque peu donneur de nausée et probablement résultat d'une fracturation en trop de fichiers pour si peu de pages, je ne sais pas ce qui m'a pris pour réaliser le projet de cette façon et il est impossible de le refondre de A à Z a temps, ça servira d'exemple personnel de ce qu'il ne faut pas faire.
